@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="/static/img/Logo.ico"/>
+    <link rel="stylesheet" href="/static/css/stryle_datos_personales.css"/>
+
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" >
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+ 
+<body id="pagina_web">
+    
+    <div class="contenedor_principal">
+
+        <div class="columna_imagen_izquierda">
+            <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+        </div>
+
+        <a id="flecha_volver">
+            <img class="fecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver" />
+        </a>
+
+        <form id="formulario" method="get" >
+            
+                <h1 class="titulo">Datos Personales</h1>
+                <p class="subtitulo">- Contanos un poco más sobre vos</p>
+
+            <div class="formulario">
+
+                <label for="primer_nombre">Nombre/s</label>
+                <input type="text" id="primer_nombre" name="primer_nombre"/>
+                <div class="errores">
+                    <span id="error_nombre"></span>
+                </div>
+
+                <label for="apellido">Apellido/s</label>
+                <input type="text" id="apellido" name="apellido"/>
+                <div class="errores">
+                    <span id="error_apellido"></span> 
+                </div>
+                
+
+                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"/>
+                <div class="errores">
+                    <span id="error_fecha"></span>
+                </div>
+
+                <label for="genero">Género</label>
+                    <select id="genero" name="genero">
+                        <option value=""> </option>
+                        <option id= "opcion1" value="femenino">Femenino</option>
+                        <option id= "opcion2" value="masculino">Masculino</option>
+                        <option id= "opcion3" value="no_binario">No binario</option>
+                    </select>
+                <div class="errores">
+                    <span id="error_genero"></span>
+                </div>
+
+                <label for="estado_civil">Estado Civil</label>
+                    <select id="estado_civil" name="estado_civil">
+                        <option value=""> </option>
+                        <option id= "opcion1" value="casado">Casado</option>
+                        <option id= "opcion2" value="divorciado">Divorciado</option>
+                        <option id= "opcion3" value="soltero">Soltero</option>
+                        <option id= "opcion4"value="viudo">Viudo</option>
+                    </select>
+                <div class="errores">
+                    <span id="error_estado_civil"></span>
+                </div>
+            </div>  
+            
+            <button type="submit" id="continuar" class="boton_continuar">Continuar</button>
+            
+        </form> 
+
+        <div class="columna_imagen_derecha">
+            <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+        </div>
+
+    </div>
+
+    <script src="/static/js/index_datos_personales.js"></script>
+
+    <script>
+        document.getElementById("flecha_volver").addEventListener("click", function() {
+            window.location.href = "/";  
+            });
+
+        document.getElementById("continuar").addEventListener("click", function() {
+            e.preventDefault();
+            window.location.href = "/pais";  
+        });
+    </script>
+</body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+</html>

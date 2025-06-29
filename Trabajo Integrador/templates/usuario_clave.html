@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/img/Logo.ico" />
+    <link rel="stylesheet" href="/static/css/style_usuario_clave.css">
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" srcset="">
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+
+<body id="pagina_web">
+    <div class="columna_imagen_izquierda">
+        <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+    </div>
+    <div class="contenedor_principal">
+            <a id="flecha_volver" ><img class="fecha_retroceder" id="flecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver"/> </a>
+        <form id="formulario" method="get">
+
+            <h1 class="titulo">Crear Usuario</h1>
+            <p class="subtitulo">- Elegí tu Usuario y Clave para luego poder acceder a tu cuenta</p>
+
+            <div class="formulario">
+
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario"/>
+            <div class="errores">
+                <span id="error_usuario"></span>
+            </div>
+
+            <label for="password">Clave</label>
+            <input type="password" id="password" name="clave"/>
+            <div class="errores">
+            <span id="error_password"></span>
+            </div>
+            
+            </div>
+
+        </form>
+
+         <button type="submit" id="continuar" class="boton_continuar">Continuar</button>
+
+    </div>
+
+    <div class="columna_imagen_derecha">
+        <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+    </div>
+
+     <script src="/static/js/index_usuario_clave.js"></script>
+    <script>
+                document.getElementById("flecha_retroceder").addEventListener("click", function() {
+            window.location.href = "/condiciones";  
+        });
+
+
+    </script>
+</body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+
+</html>

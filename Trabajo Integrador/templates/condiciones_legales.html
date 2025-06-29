@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/img/Logo.ico" />
+    <link rel="stylesheet" href="/static/css/style_condiciones_legales.css">
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" >
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+
+<body id="pagina_web">
+
+  <div class="contenedor_principal">
+    <div class="columna_imagen_izquierda">
+      <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+    </div>
+
+  <a id="flecha_volver">
+      <img class="fecha_retroceder" id="fecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver" />
+  </a>
+
+    <form id="formulario" method="get">
+      
+      <h1 class="titulo">Regulaciones</h1>
+      <p class="subtitulo">- Elija las opciones que aplican a su caso</p>
+
+
+      <div class="formulario">
+      
+        <label for="condiciones"></label>
+
+        <div class="contenedor_checkbox">
+          <input class="checkbox" type="checkbox" id="opcion_1">
+          <label for="opcion_1">Persona Políticamente Expuesta</label>
+        </div>
+        <p class="subtitulo2">(Funcionario de Gobierno o relacionado con uno)</p>
+      
+        <div class="contenedor_checkbox">
+          <input class="checkbox" type="checkbox" id="opcion_2">
+          <label for="opcion_2">Ciudadano Estadounidense o residente fiscal</label>
+        </div>
+
+        <div class="contenedor_checkbox">
+          <input class="checkbox" type="checkbox" id="opcion_3">
+          <label for="opcion_3">Sujeto Obligado</label>
+        </div>
+        <p class="subtitulo2">(Personas o Entidades obligadas por ley a reportar transacciones sospechosas relacionadas con el lavado de dinero o el financiamiento del terrorismo)</p>
+
+        <div class="contenedor_checkbox">
+          <input class="checkbox" type="checkbox" id="opcion_4">
+          <label for="opcion_4">Ninguna de las anteriores</label>
+        </div>
+
+        <div class="errores">
+          <span id="error_condiciones"></span>
+        </div>
+
+      </div>
+      
+      <button type="submit" id="continuar" class="boton_continuar">Continuar</button>
+
+    </form>
+
+  </div>
+
+  <div class="columna_imagen_derecha">
+    <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+  </div>
+
+  </div>
+
+<script src="/static/js/index_condiciones_legales.js"></script>
+
+  <script>
+    document.getElementById("flecha_volver").addEventListener("click", function() {
+            window.location.href = "/email";  
+            });
+
+        document.getElementById("continuar").addEventListener("click", function() {
+            e.preventDefault();
+            window.location.href = "/crear_usuario_clave";  
+        });
+  </script>
+</body>
+
+<footer>
+  <div class="banda_celeste"></div>
+</footer>
+
+</html>

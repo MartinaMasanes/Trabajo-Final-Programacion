@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/img/Logo.ico" />
+    <link rel="stylesheet" href="/static/css/style_pais_residencia.css">
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" >
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+
+<body id="pagina_web">
+
+    <div class="contenedor_principal">
+
+        <form id="formulario" method="get">
+
+            <div class="columna_imagen_izquierda">
+                <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+            </div>
+
+            <a id="flecha_volver">
+                <img class="fecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver" />
+            </a> 
+
+                <h1 class="titulo">País de residencia</h1>
+                <p class="subtitulo">- Necesitamos pedirte información</p>
+
+            <div class="formulario">
+                <label for="pais">Pais de residencia</label>
+
+                <select name="pais" id="pais">
+                    <option value="">  </option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Uruguay">Uruguay</option>
+                </select>
+                <div class="errores">
+                    <span id="error_pais"></span>
+                </div> 
+                
+            </div>
+
+            <button type="submit" id="continuar" class="boton_continuar">Continuar</button>
+        
+
+        </form>
+        
+    </div>
+
+    <div class="columna_imagen_derecha">
+        <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+    </div>
+
+     <script src="/static/js/index_pais_residencia.js"></script>
+
+      <script>
+        document.getElementById("continuar").addEventListener("click", function() {
+            e.prevent.Default();
+            window.location.href = "/datos_domicilio";  
+        });
+        document.getElementById("flecha_volver").addEventListener("click", function() {
+            window.location.href = "/registro";  
+        });
+    </script>
+     
+</body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+        
+</html>

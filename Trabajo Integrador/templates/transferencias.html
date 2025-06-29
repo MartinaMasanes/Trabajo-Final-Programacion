@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="/static/img/Logo.ico"/>
+    <link rel="stylesheet" href="/static/css/style_transferencia.css"/>
+
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" >
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+ 
+<body id="pagina_web">
+    
+    <div class="contenedor_principal">
+
+        <div class="columna_imagen_izquierda">
+            <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+        </div>
+
+        <a id="flecha_retroceder">
+            <img class="fecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver" />
+        </a>
+
+        <form id="formulario" method="get" >
+            
+                <h1 class="titulo">Tranferencia</h1>
+                <p class="subtitulo">- Ingrese los datos de la persona</p>
+
+            <div class="formulario">
+
+                <label for="cbu">Usuario Origen:</label>
+                <input type="int" id="origen" name="cbu"/>
+                <div class="errores">
+                    <span id="error_cbu"></span>
+                </div>
+
+                <label for="alias">Usuario Destino:</label>
+                <input type="text" id="destino" name="alias"/>
+                <div class="errores">
+                    <span id="error_alias"></span> 
+                </div>
+                
+
+                <label for="importe">Importe:</label>
+                <input type="int" id="importe" name="importe"/>
+                <div class="errores">
+                    <span id="error_importe"></span> 
+                </div>
+
+                <label for="cuenta">Cuenta:</label>
+                    <select id="genero" name="genero">
+                        <option value=""> </option>
+                        <option id= "opcion1" value="priopia">Propia</option>
+                        <option id= "opcion2" value="no_propia">No Propia</option>
+                        <option id= "opcion3" value="otros">Otro/s</option>
+                    </select>
+                <div class="errores">
+                    <span id="error_cuenta"></span>
+                </div>
+
+                <label for="concepto">Concepto:</label>
+                    <select id="concepto" name="concepto">
+                        <option value=""> </option>
+                        <option id= "opcion1" value="alquiler">Alquiler</option>
+                        <option id= "opcion2" value="cuota">Cuota</option>
+                        <option id= "opcion3" value="expensas">Expensas</option>
+                        <option id= "opcion4"value="factura">Factura</option>
+                        <option id= "opcion5"value="haberes">Haberes</option>
+                        <option id= "opcion6"value="honorarios">Honorarios</option>
+                        <option id= "opcion7"value="prestamos">Prestamo</option>
+                        <option id= "opcion8"value="seguro">Seguro</option>
+                        <option id= "opcion9"value="varios">Varios</option>
+                    </select>
+                <div class="errores">
+                    <span id="error_concepto"></span>
+                </div>
+            </div>  
+            
+            <button type="submit" id="continuar" class="boton_continuar">Continuar</button>
+            
+        </form> 
+
+        <div class="columna_imagen_derecha">
+            <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+        </div>
+
+    </div>
+
+    <script src="/static/js/index_transferencias.js"></script>
+
+    <script>
+        // document.getElementById("continuar").addEventListener("click", function() {
+        //     window.location.href = "/inicio";  
+        // });
+        document.getElementById("flecha_retroceder").addEventListener("click", function() {
+            window.location.href = "/inicio";  
+        });
+    </script>
+</body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/img/Logo.ico">
+    <link rel="stylesheet" href="/static/css/style_iniciar_sesion.css">
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" >
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+
+<body id="pagina_web">
+
+    <div class="columna_imagen_izquierda">
+        <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+    </div>
+
+    <div class="contenedor_principal">
+
+        <a id="flecha_volver">
+            <img class="fecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver" />
+        </a>
+
+        <div class="logo_principal">
+            <img id="logo.png" src="/static/img/Logo.svg" alt="Logo" height="350px"></a>
+        </div>
+
+        <form id="formulario" method="get">
+            <div class="formulario"">
+
+                <h1 class="titulo">Inicar Sesion</h1>
+
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required />
+                <div class="errores">
+                    <span id="error_usuario"></span>
+                </div>
+
+                <label for="password">Clave:</label>
+                <input type="password" id="password" name="clave" required />
+                <div class="errores">
+                    <span id="error_password"></span>
+                </div>
+                </div>
+            
+            <button type="submit" id="continuar" class="boton_continuar">Continuar</button>
+        </form>
+
+
+    </div>
+
+    <div class="columna_imagen_derecha">
+        <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+    </div>
+    <script src="/static/js/index_inicio_sesion.js"></script>
+
+    <script>
+        document.getElementById("flecha_volver").addEventListener("click", function() {
+            window.location.href = "/";  
+        });
+
+    </script>
+    <!-- <script>
+        document.getElementById("continuar").addEventListener("click", function() {
+            window.location.href = "/inicio";  
+        });
+    </script> -->
+</body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+
+</html>

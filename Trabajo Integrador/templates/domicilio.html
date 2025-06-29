@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/img/Logo.ico" />
+    <link rel="stylesheet" href="/static/css/styke_domicilio.css">
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" srcset="">
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+
+<body id="pagina_web">
+
+    <div class="contenedor_principal">
+
+        <div class="columna_imagen_izquierda">
+            <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+        </div>
+
+        <a id="flecha_volver" >
+            <img class="fecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver"/>
+        </a>
+
+        <form id="formulario" method="get">
+
+                <h1 class="titulo">Domicilio</h1>
+                <p class="subtitulo">- Contanos donde vivís</p>
+
+            <div class="formulario">
+
+                <label for="calle">Calle</label>
+                <input type="text" id="calle" name="calle"/>
+                <div class="errores">
+                        <span id="error_calle"></span>
+                </div>
+            
+                <label for="altura">Altura</label>
+                <input type="int" id="altura" name="altura"/>
+                <div class="errores">
+                    <span id="error_altura"></span>
+                </div>
+            
+                <div class="fila_doble">
+                    <div class="campo">
+                        <label for="piso">Piso</label>
+                        <input type="number" id="piso" name="piso"/>
+                        <div class="errores">
+                            <span id="error_piso"></span>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="depto">Depto</label>
+                        <input type="text" id="depto" name="depto"/>
+                        <div class="errores">
+                            <span id="error_depto"></span>
+                        </div>
+                    </div>
+                </div>
+            
+                <label for="ciudad">Ciudad</label>
+                <input type="text" id="ciudad" name="ciudad"/>
+                <div class="errores">
+                    <span id="error_ciudad"></span>
+                </div>
+
+                <label for="provincia">Provincia</label>
+                <select name="provincia" id="provincia">
+                    <option value="">  </option>
+<<<<<<< HEAD
+                    <option value="Buenos Aires">Buenos Aires</option>
+=======
+                    <option value="BuenosAires">Buenos Aires</option>
+>>>>>>> 2be151640eda0dfb06d7016ede90600c9f72b160
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Cordoba">Córdoba</option>
+                    <option value="Corrientes">Corrientes</option>
+<<<<<<< HEAD
+                    <option value="Entre Rios">Entre Ríos</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquén">Neuquén</option>
+                    <option value="Río Negro">Río Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Santiago del Estero">Santiago del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucumán">Tucumán</option>
+=======
+                    <option value="EntreRios">Entre Ríos</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="LaPampa">La Pampa</option>
+                    <option value="LaRioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquén</option>
+                    <option value="RioNegro">Río Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="SanJuan">San Juan</option>
+                    <option value="SanLuis">San Luis</option>
+                    <option value="SantaCruz">Santa Cruz</option>
+                    <option value="SantaFe">Santa Fe</option>
+                    <option value="SantiagoDelEstero">Santiago del Estero</option>
+                    <option value="TierraDelFuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucumán</option>
+>>>>>>> 2be151640eda0dfb06d7016ede90600c9f72b160
+                </select>
+                <div class="errores">
+                    <span id="error_provincia"></span>
+                </div>
+            </div>
+
+            <button type="submit" id="continuar" class="boton_continuar">Continuar</button>
+        </form>
+
+    </div>
+
+    <div class="columna_imagen_derecha">
+        <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+    </div>
+
+    <script src="/static/js/index_domicilio.js"></script>
+
+    <script>
+        document.getElementById("continuar").addEventListener("click", function() {
+            e.preventDefault();
+            window.location.href = "/email";  
+        });
+        document.getElementById("flecha_volver").addEventListener("click", function() {
+            window.location.href = "/pais";  
+        });
+    </script>
+    
+</body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+
+</html>

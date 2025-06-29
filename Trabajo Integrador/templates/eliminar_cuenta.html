@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/img/Logo.ico">
+    <link rel="stylesheet" href="/static/css/style_eliminar_cuenta.css">
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" >
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+ 
+<body id="pagina_web">
+
+    <div class="columna_imagen_izquierda">
+        <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+    </div>
+
+    <div class="contenedor_principal">
+
+        <a id="flecha_retroceder">
+            <img class="fecha_retroceder" src="/static/img/Flecha retroceder.svg" alt="Volver" />
+        </a>
+
+        <div class="logo_principal">
+            <img id="logo.png" src="/static/img/Logo.svg" alt="Logo" height="350px"></a>
+        </div>
+
+        <form id="formulario">
+            <div class="formulario"">
+
+                <h1 class="titulo">Eliminar Cuenta</h1>
+                <p class="subtitulo">- Ingrese su usuario y clave -</p>
+
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="clave">Clave:</label>
+                <input type="password" id="clave" name="clave" required>
+
+            </div>
+            
+            <button id="continuar" type="submit" class="boton_continuar">Eliminar</button>
+        </form>
+
+
+    </div>
+
+    <div class="columna_imagen_derecha">
+        <img src="/static/img/Mapa Mundo derecha.svg" alt="fondo_mundo" />
+    </div>
+    
+
+    <script>
+        document.getElementById("flecha_retroceder").addEventListener("click", function() {
+            window.location.href = "/ajustes_varios";  
+        });
+        
+    </script>
+    <script src="/static/js/eliminar_cuenta.js"></script>
+
+</body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+
+</html>

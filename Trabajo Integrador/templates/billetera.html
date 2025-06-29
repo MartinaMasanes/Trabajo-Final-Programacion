@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/img/Logo.ico" />
+    <link rel="stylesheet" href="/static/css/styke_billetera.css">
+    <title>GlobalArg</title>
+</head>
+
+<header>
+    <div class="banda_celeste">
+        <img class="logo" src="/static/img/Logo.svg" alt="Logo" srcset="">
+        <p class="nombre_encabezado"><span id="G">G</span>lobal<span id="A">A</span>rg</p>
+    </div>
+</header>
+
+<body id="pagina_web">
+
+    <div class="contenedor_principal">
+
+        <div class="columna_imagen_izquierda">
+            <img src="/static/img/Mapa Mundo Izquierda.svg" alt="fondo_mundo" />
+        </div>
+
+        <form id="formulario" action="/templates/iniciar_sesion.html" method="get">
+
+            <div class="encabezado">
+                <div class="avatar" id="avatar"></div>
+                <div class="nombre" id="nombre+apellido"></div>
+            </div>
+
+            <div class="titulo_contenedor">
+                <div class="titulo">
+                    <h3>Saldo Total</h3>
+                </div>
+                <div class="subtitulo">
+                    <h3 id="saldo"></h3>
+                </div>
+            </div>
+
+            <div class="boton_contenedor">
+                <button class="botones_redondos" id="boton_ingresar">Ingresar</button>
+                <a class="botones_redondos" id="boton_transferir" >Transferir</a>
+            </div>
+
+            <div class="boton_contenedor2">
+                <a href=""><button class="botones_cuadrados" id="boton_vario">Pagar servicios</button></a>
+                <a href=""><button class="botones_cuadrados" id="boton_vario">Recargar celular</button></a>
+                <a href=""><button class="botones_cuadrados" id="boton_vario">Cargar transporte</button></a>
+                <a href=""><button class="botones_cuadrados" id="boton_vario">Pagar con QR</button></a> 
+            </div>
+
+            <div class="audio_contenedor">
+                <video width="640" controls autoplay muted playsinline>
+                    <source src="/static/img/video_explicativo.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="menu_inferior">
+                    <a class="botones_menu" id="boton_inicio"><h3>Inicio</h3></a>
+
+                    <a class="botones_menu" href=""><h3>Billetera</h3></a>
+
+                    <a class="botones_menu" href=""><h3>Ahorros</h3></a>
+
+                    <a class="botones_menu" id="ajustes"><h3>Ajustes</h3></a>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="columna_imagen_derecha">
+        <img src="/static/img/Mapa Mundo Derecha.svg" alt="fondo_mundo" />
+    </div>
+    <script>
+            document.getElementById("nombre+apellido").textContent =localStorage.getItem("nombre")+" "+localStorage.getItem("apellidos") ;
+            nombre=localStorage.getItem("nombre");
+            apellido=localStorage.getItem("apellidos");
+            nom_ape=nombre.charAt(0)+apellido.charAt(0);
+            document.getElementById("avatar").textContent =nom_ape
+            document.getElementById("saldo").textContent =localStorage.getItem("saldo") +" "+ "ARS"
+
+            document.getElementById("boton_inicio").addEventListener("click", function() {
+                            window.location.href = "/";  
+                            });
+            document.getElementById("boton_transferir").addEventListener("click", function() {
+                            window.location.href = "/transfer";  
+                            });
+            document.getElementById("ajustes").addEventListener("click", function() {
+                            window.location.href = "/ajustes_varios";  
+                            });
+            
+    </script>
+
+    </body>
+
+<footer>
+    <div class="banda_celeste"></div>
+</footer>
+</html>
