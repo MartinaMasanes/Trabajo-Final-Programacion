@@ -1,10 +1,3 @@
-Integrantes
-
-Gunetti Ulises - Frontend 
-Masanes Martina - Frontend 
-Pascua Franco - Backend 
-Sergio Duarte
-
 GlobalARG
 
 GlobalArg es una billetera virtual pensada para facilitar la gestión del dinero de forma sencilla, rápida y accesible para cualquier persona.
